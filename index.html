@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>moving image</title>
+    <script
+      src="https://kit.fontawesome.com/228c529b20.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      img {
+        height: 120px;
+        width: 200px;
+        /* position: absolute;
+        top: 0; */
+      }
+      .heading {
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="truck" src="train.png" alt="" />
+    <h3 class="heading">Click the button to move</h3>
+    <button id="leftbtn">Move left</button>
+    <button id="rightbtn">Move right</button>
+  </body>
+  <script>
+    let imgEle = document.querySelector(".truck");
+    let rightBtnEle = document.querySelector("#rightbtn");
+    let leftBtnEle = document.querySelector("#leftbtn");
+    let finalPosition = 300;
+    let initialPos = 20;
+    rightBtnEle.addEventListener("click", function () {
+      imgEle.style.transform = `translateX(${initialPos}px)`;
+      initialPos += 20;
+    });
+    leftBtnEle.addEventListener("click", function () {
+      imgEle.style.transform = `translateX(${initialPos}px)`;
+      initialPos -= 20;
+    });
+  </script>
+</html>
