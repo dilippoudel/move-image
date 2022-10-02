@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>scroll content</title>
+    <style>
+      .content {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        overflow: scroll;
+        margin-left: 12px;
+        padding: 4px 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hello World :):)</h2>
+    <div class="content">
+      <p class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores enim,
+        provident, sed numquam sunt qui atque tempora at ab, cumque blanditiis
+        officiis doloremque odit optio omnis. Praesentium, dignissimos
+        provident, id officiis labore eveniet, atque eius laboriosam veritatis
+        consequatur porro odit consequuntur fugiat odio ab minima quod?
+        Doloremque perspiciatis beatae quis?
+      </p>
+    </div>
+    <script>
+      let divContainer = document.querySelector(".content");
+      divContainer.addEventListener("scroll", function () {
+        divContainer.style.backgroundColor = "lightgreen";
+        document.querySelector(".text").style.color = "red";
+      });
+    </script>
+  </body>
+</html>
